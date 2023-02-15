@@ -1,32 +1,38 @@
 
 public abstract class Conta {
+	
+	
 	protected int numero;
-	protected double saldo;
+	protected double saldo =0;
 	protected Cliente cliente;
 	protected Banco banco;
-	public void depositar () {
-		
+	
+	
+	void depositar (double valor) {
+		this.saldo += valor;
 	}
-	public void transferir () {
-		
+	void transferir (double valor, Conta contaDestino) {
+		this.sacar(valor);
+		contaDestino.depositar(valor);
 	}
-	public void sacar () {
-		
+	void sacar (double valor) {
+		this.saldo -= valor;
 	}
-	public void saldo () {
-		
+	void saldo () {
+		System.out.println("Saldo em conta: "+getSaldo());
 	}
-	public int getNumero() {
+	int getNumero() {
 		return numero;
 	}
-	public void setNumero(int numero) {
+	void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public double getSaldo() {
+	double getSaldo() {
 		return saldo;
 	}
-	public void setSaldo(double saldo) {
+	void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+	
 	
 }
