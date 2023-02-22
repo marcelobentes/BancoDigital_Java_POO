@@ -4,8 +4,8 @@ public abstract class Conta {
 	
 	protected int numero;
 	protected double saldo =0;
-	protected Cliente cliente;
-	protected Banco banco;
+	Cliente cliente = new Cliente();
+	Banco banco = new Banco();
 	
 	
 	void depositar (double valor) {
@@ -33,6 +33,8 @@ public abstract class Conta {
 	void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+	
+	
 	
 	
 }

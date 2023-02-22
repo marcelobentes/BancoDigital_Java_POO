@@ -5,6 +5,7 @@ public class Aplicacao {
 		ContaPoupanca contaPoupanca = new ContaPoupanca();
 		Conta contaCorrente = new ContaCorrente();
 		
+	
 				
 		contaPoupanca.setNumero(3221);
 		contaPoupanca.banco.setAgencia(12);
@@ -17,7 +18,8 @@ public class Aplicacao {
 		contaPoupanca.depositar(400);
 		
 		
-			System.out.println("***Informações da Conta***");
+		
+			System.out.println("***Informações da Conta Poupança***");
 			System.out.println("Banco: "+contaPoupanca.banco.getNome());
 			System.out.println("Agencia: "+contaPoupanca.banco.getAgencia());
 			System.out.println("Numero: "+contaPoupanca.getNumero());
