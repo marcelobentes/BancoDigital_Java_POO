@@ -5,7 +5,6 @@ public class Aplicacao {
 		ContaPoupanca contaPoupanca = new ContaPoupanca();
 		Conta contaCorrente = new ContaCorrente();
 		
-	
 				
 		contaPoupanca.setNumero(3221);
 		contaPoupanca.banco.setAgencia(12);
@@ -16,15 +15,24 @@ public class Aplicacao {
 		contaPoupanca.cliente.setTelefone("(21)996845875");
 		contaPoupanca.cliente.setEndereco("Rua Rio de Janeiro");
 		contaPoupanca.depositar(400);
+		contaPoupanca.transferir(100, contaCorrente);
+		
+		contaPoupanca.imprimirDadosConta();
+		System.out.println("*************************************");
+		System.out.println("*************************************");
+		System.out.println("%%%Dados Conta Corrente%%%");
+		contaCorrente.setNumero(1520);
+		contaCorrente.banco.setAgencia(12);
+		contaCorrente.banco.setNome("Santa Clara");
+		contaCorrente.cliente.setNome("Santo Espirito");
+		contaCorrente.cliente.setCpf("7894546482");
+		contaCorrente.cliente.setTelefone("(21)998564698");
+		contaCorrente.cliente.setEndereco("Rua da Bahia");
 		
 		
+		contaCorrente.imprimirDadosConta();
 		
-			System.out.println("***Informações da Conta Poupança***");
-			System.out.println("Banco: "+contaPoupanca.banco.getNome());
-			System.out.println("Agencia: "+contaPoupanca.banco.getAgencia());
-			System.out.println("Numero: "+contaPoupanca.getNumero());
-			System.out.println("Cliente: "+contaPoupanca.cliente.getNome());
-			System.out.println("Saldo em conta: "+contaPoupanca.saldo);
+			
 				
 				
 	}

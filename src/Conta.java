@@ -34,6 +34,15 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 	
+	public void imprimirDadosConta() {
+		System.out.println("###Informações da Conta###");
+		System.out.println("Banco: "+banco.getNome());
+		System.out.println("Agencia: "+banco.getAgencia());
+		System.out.println("Numero: "+getNumero());
+		System.out.println("Cliente: "+cliente.getNome());
+		System.out.println("Saldo em conta: "+saldo);
+	}
+	
 	
 	
 	
